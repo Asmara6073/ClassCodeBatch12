@@ -29,7 +29,7 @@ class Car extends Insurance{
 
     @Override
     void cancelInsurance(String insuranceName) {
-        System.out.println(insuranceName+" has been cancelled");
+        System.out.println(insuranceName+" for "+carModel+" has been cancelled");
     }
 
 }
@@ -50,7 +50,7 @@ Pet(String petType,String insuranceName){
     @Override
     void cancelInsurance(String insuranceName) {
 
-        System.out.println(insuranceName+" has been cancelled");
+        System.out.println(insuranceName+" for "+petType+" has been cancelled");
     }
 }
 class Health extends Insurance{
@@ -70,7 +70,7 @@ class Health extends Insurance{
     @Override
     void cancelInsurance(String insuranceName) {
 
-        System.out.println(insuranceName+" has been cancelled");
+        System.out.println(insuranceName+" for "+healthInsType+ " has been cancelled");
     }
 }
 
