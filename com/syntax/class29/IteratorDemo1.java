@@ -12,11 +12,11 @@ public class IteratorDemo1 {
         courses.add("Java");
         courses.add("Java");
         courses.add("Selenium");
-       /* for (int i=0;i<5;i++){
+        for (int i=0;i<5;i++){
             if(courses.get(i).equals("Java")){
                 courses.remove("Java");
             }
-        }*/
+        }
 
         for(String course:courses){
             if(course.equals("Java")){
