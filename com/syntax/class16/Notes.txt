@@ -1,0 +1,20 @@
+
+
+
+1)String replace method
+    - This method returns a new string resulting from replacing all occurrences of oldChar in this string with newChar
+   -Syntax= str.replace(oldchar,replacementchar);
+2) String replaceAll method
+    -This method replaces each substring of this string that matches the given regular expression with the given replacement
+    -Syntax= str.replaceAll(String regx, String replacement);
+    - A regular expression defines a search pattern for strings.
+3) String [] split method
+    -This method splits the string around matches of the given regular expression
+    -Syntax= String []split(String regex)
+4) String objects are immutable.
+    -Immutable means unchangeable
+    - Once a string object is created its data or state can't be changed
+    - but a new string object is created
+
+-.length=property
+-.length()=method

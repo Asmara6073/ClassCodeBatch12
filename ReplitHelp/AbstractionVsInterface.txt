@@ -1,0 +1,35 @@
+
+--Both abstract classes and interfaces are used to hide the internal implementation of future and show
+    only the main functionality.
+    -- Both used for abstraction
+
+--Interface(100% abstraction class)
+    -By default all data members are public static final
+        -public because must be accessible across all classes
+        -static because we cant instantiate interfaces
+        -final because it would cause problems for different classes trying to change the value
+
+    -All methods in an interface are public and abstract
+        -public because it must be accessible across all classes
+        -abstract because we do not have a body for the method just declaring it
+
+    - When we implement an interface we must inherit all of its methods
+
+
+ --Abstract Class
+    -can have both abstract and concrete methods in abstract class
+
+    -All abstract methods must be implemented in inherited class
+
+
+Differences:
+-- In interfaces all data members are public whereas in abstract classes you can use any modifier
+-- In interfaces all data members are always static whereas in abstract classes they can be static or not
+--In interfaces all data members are final whereas in abstract classes they can be either or
+--In interfaces all methods are implicitly abstract and public whereas in abstract classes
+    you can have both abstract and non-abstract methods
+--Implement keyword vs extends keyword
+-- A class can implement more than one interface but not extend more than one class
+
+-- Choose Interfaces when you don't know the implementation logic but you know the requirements
+-- Choose Abstract Classes when you know only know the implementation logic for some methods and not others
