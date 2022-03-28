@@ -12,7 +12,7 @@ public class ListDemo4 {
 
 
         LinkedList<Student> studentLinkedList=new LinkedList<>();
-        studentLinkedList.add(Teyfur);
+        studentLinkedList.add(new Student("Teyfur",20,"memes"));
         studentLinkedList.add(Gulden);
         studentLinkedList.add(Emilia);
         System.out.println(studentLinkedList);
