@@ -12,18 +12,20 @@ public class Replit190 {
 
         LinkedList<Integer>fibbonaci=new LinkedList<>();
 
-        int num1=0;
-        int num2=1;
-        for (int i = 1; i <= 10; ++i)
-        {
-            System.out.print(num1+" ");
+        fibbonaci.add(0);
+        fibbonaci.add(1);
+        fibbonaci.add(1);
+        fibbonaci.add(2);
+        fibbonaci.add(3);
+        fibbonaci.add(5);
+        fibbonaci.add(8);
+        fibbonaci.add(13);
+        fibbonaci.add(21);
+        fibbonaci.add(34);
 
-            int sumOfPrevTwo = num1 + num2;
-            num1 = num2;
-            num2 = sumOfPrevTwo;
-            fibbonaci.add(i);
+        for(Integer numbers:fibbonaci){
+            System.out.print(numbers+" ");
         }
-
 
     }
 
