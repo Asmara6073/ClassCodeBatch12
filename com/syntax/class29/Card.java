@@ -110,15 +110,13 @@ class CardTester{
         Iterator<Card> itr=cards.iterator();
 
         while(itr.hasNext()){
-            itr.next().cashback();
+            Card c=itr.next();
+            c.cashback();
+            c.paymentDate();
 
         }
 
-        Iterator<Card> itr2=cards.iterator();
 
-        while(itr2.hasNext()){
-            itr2.next().paymentDate();
-        }
 
 
 

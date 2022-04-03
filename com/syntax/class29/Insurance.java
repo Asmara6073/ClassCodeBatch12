@@ -8,19 +8,32 @@ package com.syntax.class29;
 // Using for loop/advanced for loop/ iterator access all methods of the class.
 public abstract class Insurance {
     String insuranceName;
+    Insurance(String insuranceName){
+        this.insuranceName=insuranceName;
+    }
 
     abstract void getQuote();
-    abstract void cancelInsurance(String insuranceName);
+    abstract void cancelInsurance();
 
     }
 
 class Car extends Insurance{
 
     String carModel;
-    Car(String carModel,String insuranceName){
-        super.insuranceName=insuranceName;
+
+    Car(String insuranceName,String carModel) {
+        super(insuranceName);
         this.carModel=carModel;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "insuranceName='" + insuranceName + '\'' +
+                ", carModel='" + carModel + '\'' +
+                '}';
+    }
+
     @Override
     void getQuote() {
 
@@ -28,7 +41,7 @@ class Car extends Insurance{
     }
 
     @Override
-    void cancelInsurance(String insuranceName) {
+    void cancelInsurance() {
         System.out.println(insuranceName+" for "+carModel+" has been cancelled");
     }
 
@@ -36,10 +49,18 @@ class Car extends Insurance{
 class Pet extends Insurance{
 String petType;
 
-Pet(String petType,String insuranceName){
-    this.insuranceName=insuranceName;
-    this.petType=petType;
-}
+    Pet(String insuranceName, String petType) {
+        super(insuranceName);
+        this.petType=petType;
+    }
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "insuranceName='" + insuranceName + '\'' +
+                ", petType='" + petType + '\'' +
+                '}';
+    }
 
     @Override
     void getQuote() {
@@ -48,29 +69,33 @@ Pet(String petType,String insuranceName){
     }
 
     @Override
-    void cancelInsurance(String insuranceName) {
+    void cancelInsurance() {
 
         System.out.println(insuranceName+" for "+petType+" has been cancelled");
     }
 }
 class Health extends Insurance{
-    String healthInsType;
 
-    Health(String healthInsType,String insuranceName){
-        this.insuranceName=insuranceName;
-        this.healthInsType=healthInsType;
+
+    Health(String insuranceName) {
+        super(insuranceName);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
     @Override
     void getQuote() {
 
-        System.out.println(insuranceName+" :Here is your quote for your "+healthInsType);
+        System.out.println(insuranceName+" :Here is your quote for your insurance");
     }
 
     @Override
-    void cancelInsurance(String insuranceName) {
+    void cancelInsurance() {
 
-        System.out.println(insuranceName+" for "+healthInsType+ " has been cancelled");
+        System.out.println(insuranceName+" has been cancelled");
     }
 }
 

@@ -11,34 +11,31 @@ public class InsuranceTester {
 
         ArrayList<Insurance> insurance=new ArrayList<>();
 
-        insurance.add(new Car("BMW","Geico"));
-        insurance.add(new Pet("Dog","Blue Cross"));
-        insurance.add(new Health("Dental","Medstar"));
+        insurance.add(new Car("Geico","BMW"));
+        insurance.add(new Pet("Petco","Dog"));
+        insurance.add(new Health("Medstar"));
 
        for(int i=0;i< insurance.size();i++){
            insurance.get(i).getQuote();
-           insurance.get(i).cancelInsurance("Aflac");
+           insurance.get(i).cancelInsurance();
        }
 
         System.out.println("***************************************************");
 
         for (Insurance i:insurance) {
+            System.out.println(i);
            i.getQuote();
-            i.cancelInsurance("Medstar");
+            i.cancelInsurance();
         }
         System.out.println("****************************************************");
         Iterator<Insurance> itr= insurance.iterator();
 
        while(itr.hasNext()){
-           itr.next().getQuote();
+           Insurance i=itr.next();
+           i.getQuote();
+           i.cancelInsurance();
         }
-        System.out.println("****************************************************");
 
-       Iterator<Insurance>itr2=insurance.iterator();
-
-       while(itr2.hasNext()){
-           itr2.next().cancelInsurance("Geico");
-       }
 
 
 
