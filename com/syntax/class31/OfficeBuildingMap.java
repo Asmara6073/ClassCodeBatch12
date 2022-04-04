@@ -21,7 +21,7 @@ public class OfficeBuildingMap {
 
         System.out.println(building.size());// used to get size of map
         building.replace(4,"Amazon","Insight");//used to update values
-        building.remove(7);//used to remove 
+        building.remove(7);//used to remove
         System.out.println(building);
 
     }
