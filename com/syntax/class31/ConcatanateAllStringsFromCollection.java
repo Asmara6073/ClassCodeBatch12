@@ -19,12 +19,12 @@ public class ConcatanateAllStringsFromCollection {
         words.add(" is");
         words.add(" Tarik.");
 
+        StringBuilder concat= new StringBuilder();
         for( String strings:words){
-            String concat;
-            concat=strings;
-            System.out.print(concat);
-        }
+            concat.append(strings);
 
+        }
+        System.out.println(concat);
 
 
 

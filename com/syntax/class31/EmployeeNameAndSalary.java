@@ -27,6 +27,19 @@ public class EmployeeNameAndSalary {
         }
 
 
+        String name=null;
+        Integer salary=0;
+
+        for(Map.Entry<String,Integer> entry:employee.entrySet()){
+            if(entry.getValue()>salary){
+                salary= entry.getValue();
+                name= entry.getKey();
+            }
+
+
+        }
+        System.out.println(name+" =$"+salary);
+
     }
 
 
