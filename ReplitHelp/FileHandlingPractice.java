@@ -8,6 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class FileHandlingPractice {
@@ -21,6 +22,11 @@ public class FileHandlingPractice {
         Sheet sheet=xssfWorkbook.getSheet("Sheet2");
         Row row=sheet.getRow(0);
         Cell cell=row.getCell(0);
+        sheet.createRow(2).createCell(0).setCellValue("Paulos");
+        sheet.createRow(2).createCell(1).setCellValue(12);
+        FileOutputStream fileOutputStream=new FileOutputStream(path);
+        xssfWorkbook.write(fileOutputStream);
+
 
         System.out.println(cell);
 
