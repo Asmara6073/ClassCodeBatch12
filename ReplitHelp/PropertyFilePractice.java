@@ -12,7 +12,7 @@ public class PropertyFilePractice {
          * Got to config2.properties
          * add usernmae 3 and password 3
          */
-        FileInputStream fileInputStream=new FileInputStream(path);
+       FileInputStream fileInputStream=new FileInputStream(path);
         Properties properties=new Properties();
 
         properties.load(fileInputStream);
@@ -24,7 +24,8 @@ public class PropertyFilePractice {
 
         properties.store(fileOutputStream,"New username and password");
 
-
+        
+        }
     }
 
-}
+
