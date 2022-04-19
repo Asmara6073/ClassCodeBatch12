@@ -1,0 +1,66 @@
+Lists should be used when we have to store single elements as a collection.
+1) They maintain the insertion order
+2)They allow us to store duplicate elements
+3)They are dynamic in size
+4) Data is stored based on indexes
+
+Two famous classes that implement the List interface are:
+1)ArrayList
+2)LinkedList
+
+ArrayList
+    --We should use the arraylist when most of the operations(70%-90%) are storing new data at the end of the list
+    and reading data, no maniupulation of data
+
+LinkedList
+    --When most of the operations (70%-90%) are storing new data in between or at the start of the list
+        then we should go with the LinkedList
+
+In real life 90% of times ArrayList is used
+
+Sets
+    -Sets also store single values, but they dont allow duplicates.
+    1)HashSet  2)LinkedHashSet  3)TreeSet
+
+-HashSet(90% of the time it is used in real life)
+    1)Does not maintain insertion order
+    2)Fastest when it comes to insertion and retrieval speed
+
+-linkedHashSet
+    1)Maintains the insertion order
+    2)Insertion is slower than HashSet, but faster than TreeSet
+    3)Retrieval is the slowest
+
+-TreeSet
+    1)Sorts the data in natural order
+    2)Insertion is the slowest
+    3)Retrieval is faster than linkedHashSet, but slower than Hashset
+
+Maps
+    1)Maps are a datastructure that can store the data in the form of key value pairs
+        -We can use any real life info as key
+    2) Searching in maps is very fast
+
+1)HashMap  2)LinkedHashMap  3)TreeMap  4)HashTable
+
+
+HashMap
+    -Fastest, most widely used, but does not maintain the insertion order
+
+
+LinkedHashMap
+    -Maintains the insertion order
+    -Slower insertion than HashMap, but faster than TreeMap
+    -Slowest retrieval
+
+
+TreeMap
+    -Data is stored in sorted form
+    -Insertion speed is the slowest
+    -Retrieval faster than LinkedHashMap but slower than HashMap
+
+HashTable
+    -Same as HashMap but thread safe
+    Does not allow any null values
+
+FileHandling in Java
