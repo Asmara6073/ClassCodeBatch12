@@ -1,6 +1,6 @@
 package com.syntax.class34;
 
-public class Account {
+public class Account<calculator> {
     double balance;
 
     public void setBalance(double balance) throws InsufficientBalance {
@@ -11,4 +11,16 @@ public class Account {
         }
     }
 
+    public void Calculate(int i, int b){
+        Calculator calc=new Calculator();
+        calc.DoTheMath(i,b);
+    }
+
+    public static void main(String[] args) {
+        Account acc=new Account();
+
+        acc.Calculate(6,8);
+
+
+    }
 }

@@ -9,7 +9,7 @@ public class PropertiesFileDemo1 {
     public static void main(String[] args) throws IOException {
         //First step is locating the file we want to read.
         String path="Files/Config.properties";
-        // navigating to the location where the file is stored
+        // navigating to the location where the file is store
         FileInputStream fileInputStream=new FileInputStream(path);
         //Special class which knows how to read the .properties file
         Properties properties=new Properties();

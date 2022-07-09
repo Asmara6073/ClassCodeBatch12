@@ -1,6 +1,9 @@
 package ReplitHelp;
 
 import java.lang.invoke.SwitchPoint;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
 
 public class Replit215 {
 /**
@@ -24,32 +27,63 @@ public class Replit215 {
  * input ")()(" -> true
  */
 
-/*public static boolean isBalanced(String s){
-    boolean isMatching = false;
-    switch(s){
-        case "(()":
-        case "(()))":
-        case ")":
-        case  "(":
-            isMatching= false;
-            break;
-        case "(())":
-        case  "()":
-        case  ")()(":
-            isMatching= true;
-            break;
-    }
-return isMatching;
-}
-*/
 
-public boolean isBalanced(String s){
-    if(s.endsWith(s.){
 
+static String isBalancedUsingStack(String s){
+    Stack<Character> stack= new Stack();
+    for(int i=0;i<s.length();i++){
+        if(s.charAt(i)=='(' || s.charAt(i)=='{' || s.charAt(i) == '['){
+            stack.push(s.charAt(i));
+        }else{
+            if (stack.isEmpty()){
+                return "false";
+            }else{
+                char popValue=stack.pop();
+                if (s.charAt(i) == ')'&& popValue!='('){
+                    return "false";
+                }else if (s.charAt(i) == ']'&& popValue!='['){
+                    return "false";
+                }else if(s.charAt(i) == '}'&& popValue!='{'){
+                    return "false";
+                }
+            }
+        }
+    }
+    if(stack.isEmpty()){
+        return "true";
+    }else{
+        return "false";
     }
 }
+
+    public static boolean isBalanced(String s){
+        int num1=s.replace("(","").length();
+        int num2=s.replace(")","").length();
+        if (num1 == num2) {
+            return true;
+        } else  {
+            return false;
+        }
+    }
+
+
+
+
+
+
 
 public static void main(String[] args) {
+
+    System.out.println(isBalanced(")()("));
+
+String s= "))()((";
+
+int num1=s.replace(")","").length();
+    System.out.println(num1);
+
+int num2=s.replace("(","").length();
+    System.out.println(num2);
+
 
 
 
