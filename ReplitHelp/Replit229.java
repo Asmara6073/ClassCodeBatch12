@@ -11,8 +11,6 @@ public class Replit229 {
      */
 
     // create a map
-
-
     public static int countMaxChar(String str){
         HashMap<Character,Integer> charCountMap=new HashMap<>();
         char[]charArray=str.replaceAll(" ","").toCharArray();
@@ -36,7 +34,7 @@ public class Replit229 {
     }
 
     public static void main(String[] args) {
-        String s = "aaffddf";
+        /**String s = "aaffddf";
         HashMap<Character, Integer> charCountMap = new HashMap<>();// we will map each character to its count
         char[] charArray = s.replaceAll(" ", "").toCharArray();// convert string to charArray and removing the whitespace
         for (char c : charArray) {// loop through the char array
@@ -57,9 +55,9 @@ public class Replit229 {
         }
         System.out.println(maxCount);
 
-
-    countMaxChar("aaaaabcccc");
-
+         countMaxChar("aaaaabcccc");
+         */
+        
 
     }
 

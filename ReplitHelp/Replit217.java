@@ -1,8 +1,6 @@
 package ReplitHelp;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class Replit217 {
 
@@ -10,6 +8,9 @@ public class Replit217 {
      * Complete countDuplicates method This method should count how many numbers are appearing more than once and should return the count.
      * Input [12,12,13,45,78,7,7] output 2
      */
+
+
+
 
     static int countDuplicates(List<Integer> numbers){
         HashSet<Integer>set=new HashSet<>();// set for numbers from list to be stored
@@ -36,6 +37,9 @@ public class Replit217 {
         nums.add(3);
 
         System.out.println(countDuplicates(nums));
+
+
+
 
     }
 }

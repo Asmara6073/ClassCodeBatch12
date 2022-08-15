@@ -28,38 +28,18 @@ public class Replit215 {
  */
 
 
+    /**
+     *
+     * the number of open and closing brackets should be the same in the string
+     * If i have 3 opening brackets then I should have 3 closing brackets
+     *
+     */
 
-static String isBalancedUsingStack(String s){
-    Stack<Character> stack= new Stack();
-    for(int i=0;i<s.length();i++){
-        if(s.charAt(i)=='(' || s.charAt(i)=='{' || s.charAt(i) == '['){
-            stack.push(s.charAt(i));
-        }else{
-            if (stack.isEmpty()){
-                return "false";
-            }else{
-                char popValue=stack.pop();
-                if (s.charAt(i) == ')'&& popValue!='('){
-                    return "false";
-                }else if (s.charAt(i) == ']'&& popValue!='['){
-                    return "false";
-                }else if(s.charAt(i) == '}'&& popValue!='{'){
-                    return "false";
-                }
-            }
-        }
-    }
-    if(stack.isEmpty()){
-        return "true";
-    }else{
-        return "false";
-    }
-}
 
     public static boolean isBalanced(String s){
-        int num1=s.replace("(","").length();
-        int num2=s.replace(")","").length();
-        if (num1 == num2) {
+        int num1=s.replace("(","").length();// getting the count of closing brackets
+        int num2=s.replace(")","").length();// getting the count of opening brackets
+        if (num1 == num2) {// if the count of both opening and closing brackets is the same then it is balanced
             return true;
         } else  {
             return false;
@@ -74,15 +54,10 @@ static String isBalancedUsingStack(String s){
 
 public static void main(String[] args) {
 
-    System.out.println(isBalanced(")()("));
+        String s="(()())";
+    System.out.println(isBalanced(s));
 
-String s= "))()((";
 
-int num1=s.replace(")","").length();
-    System.out.println(num1);
-
-int num2=s.replace("(","").length();
-    System.out.println(num2);
 
 
 

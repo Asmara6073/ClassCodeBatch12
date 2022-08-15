@@ -37,7 +37,7 @@ public class Replit218 {
         list.add("remote");
 
 
-        deviceNamesSystem(list);
+        System.out.println(deviceNamesSystem(list));
 
 
 

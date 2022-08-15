@@ -8,12 +8,12 @@ public class Replit226 {
 
     public static String reverse (String strToRev){
 
-        String reversed= "";
+        String reversed="";
         String [] strings = strToRev.split(" ");
         for(int i= strings.length-1;i>=0;i--){
             reversed+=strings[i]+" ";
         }
-        return reversed;
+        return reversed.trim();
     }
 
     public static String reverseString(String input){
