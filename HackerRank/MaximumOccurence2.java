@@ -24,7 +24,7 @@ public class MaximumOccurence2 {
         Set<Map.Entry<String,Integer>>entrySet=nameCount.entrySet();
 
         Map.Entry<String,Integer> maxEntry=null;
-        int maxValue=0;
+        int maxValue=Integer.MIN_VALUE;
 
         for(Map.Entry<String,Integer> entry:entrySet){
 

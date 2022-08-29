@@ -12,6 +12,41 @@ public class MaximumOccurence {
      * "abscaaaaabdddd" -> 6
      */
 
+    /*
+    -Iterate through the list of words given
+    -Create a map and check if map contains the key and if not then add it to map with value 1
+    -If it contains key then add 1 to the value
+    iterate through entry set and check to see with entry has largest value
+    return the largest value
+     */
+
+    public static int countMaxCharacterOccurence(String s){
+
+        char [] word=s.replaceAll(" ","").toCharArray();
+        Map<Character,Integer> charCount=new HashMap<>();
+
+        for(char letter:word){
+            if(charCount.containsKey(letter)){
+                charCount.put(letter,charCount.get(letter)+1);
+            }else{
+                charCount.put(letter,1);
+            }
+        }
+
+        int maxCharOccurence=Integer.MAX_VALUE;
+        Set<Map.Entry<Character,Integer>> entrySet=charCount.entrySet();
+        for(Map.Entry<Character,Integer> entry:entrySet){
+            if(entry.getValue()>maxCharOccurence){
+                maxCharOccurence=entry.getValue();
+            }
+
+        }
+        return maxCharOccurence;
+    }
+
+
+
+
 
     /**
      *
@@ -20,6 +55,7 @@ public class MaximumOccurence {
      * Create a set with entrySet of map and use counter to count each occurence
      *
      */
+
 
     public static void countMaximumOccurence(String s){
         HashMap<Character,Integer> map=new HashMap();

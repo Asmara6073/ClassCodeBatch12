@@ -12,8 +12,8 @@ public class CharactersInLastWord {
  */
 
  public static int lastWordofStringCount(String s){
- String [] array=s.split(" ");
- int countOfLastWord=array[array.length-1].length();
+ String [] array=s.split(" ");// split the string into an array  by spaces in between each word so each word is a seperate element
+ int countOfLastWord=array[array.length-1].length();// to find length of last word use indexing and then length method
  return countOfLastWord;
 }
 

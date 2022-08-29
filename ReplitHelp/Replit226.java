@@ -6,6 +6,21 @@ public class Replit226 {
      * Reverse the String without using the Reverse method from the BtringBuilder Class
      */
 
+
+   /*
+   Write a method that will reverse the words order in a String as well as the letters in the string
+    */
+
+
+    public static String completeReverse (String strToReverse){
+
+        StringBuilder stringBuilder=new StringBuilder(strToReverse);
+
+        String reversedString=stringBuilder.reverse().toString().trim();
+
+        return reversedString;
+    }
+
     public static String reverse (String strToRev){
 
         String reversed="";
@@ -27,7 +42,8 @@ public class Replit226 {
 
 
     public static void main(String[] args) {
-        System.out.println(reverse("Hi How Are"));
+        System.out.println(reverseString("Hi How Are"));
+        System.out.println(completeReverse("Hi How Are You"));
 
         int i= 276;
       String num=Integer.toString(i);

@@ -16,6 +16,37 @@ public class RemoveConsecutiveDuplicates {
      *
      *
      */
+
+    public static String removeDuplicates(String s){
+
+        String result="";
+        if(s.length()==1){
+            return s;
+        }else{
+
+            result+=s.charAt(0);
+
+
+            for(int i=1;i<s.length();i++){
+                if(s.charAt(i-1)!=s.charAt(i)){
+                    result+=s.charAt(i);
+                }
+
+            }
+
+
+
+
+        }
+
+
+
+
+        return result;
+    }
+
+
+
     public static String removeConsecutiveDuplicates(String s){
         String result="";
         if(s.length()==1){
@@ -23,7 +54,7 @@ public class RemoveConsecutiveDuplicates {
         }
         result+=s.charAt(0);
         for(int i=1;i<s.length();i++){
-            if(s.charAt(i-1)!=s.charAt(i)){
+            if(s.charAt( i-1)!=s.charAt(i)){
                 result+=s.charAt(i);
             }
         }

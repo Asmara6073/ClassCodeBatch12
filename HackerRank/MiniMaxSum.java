@@ -56,7 +56,7 @@ public class MiniMaxSum {
 
         miniMaxSum(nums);
 
-        List<Integer> numbers= new ArrayList<>();
+     /*   List<Integer> numbers= new ArrayList<>();
         numbers.add(10);
         numbers.add(3);
         numbers.add(6);
@@ -65,6 +65,7 @@ public class MiniMaxSum {
 
         miniMaxSumLists(numbers);
 
+      */
 
     }
 
